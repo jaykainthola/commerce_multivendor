@@ -1,0 +1,22 @@
+## YAML Template.
+---
+
+# All action links for this module
+
+commerce_multivendor.store_locations_add:
+  # Which route will be called by the link
+  route_name: entity.commerce_multivendor.add_form
+  title: 'Add Store Locations'
+
+  # Where will the link appear, defined by route name.
+  appears_on:
+    - entity.commerce_store_locations.collection
+    - entity.commerce_store_locations.list
+    - entity.commerce_store_locations.canonical
+    
+commerce_multivendor.add_inventory:
+  route_name: entity.commerce_store_item.add_inventory
+  title: 'Add Inventory'
+  appears_on:
+    - entity.commerce_store_item.list
+    - entity.commerce_store_item.inventory

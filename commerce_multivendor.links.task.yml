@@ -1,0 +1,24 @@
+## YAML Template.
+---
+# Define the 'local' links for the module
+
+inventory.settings_tab:
+  route_name: manage_inventory.inventory_settings
+  title: Settings
+  base_route: manage_inventory.inventory_settings
+
+inventory.view:
+  route_name: entity.content_entity_manage_inventory.canonical
+  base_route: entity.content_entity_manage_inventory.canonical
+  title: View
+
+contact.page_edit:
+  route_name: entity.content_entity_manage_inventory.edit_form
+  base_route: entity.content_entity_manage_inventory.canonical
+  title: Edit
+
+contact.delete_confirm:
+  route_name:  entity.content_entity_manage_inventory.delete_form
+  base_route:  entity.content_entity_manage_inventory.canonical
+  title: Delete
+  weight: 10

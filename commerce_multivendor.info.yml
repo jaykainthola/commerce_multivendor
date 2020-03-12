@@ -1,0 +1,12 @@
+## YAML Template.
+---
+name: Commerce multivendor
+description: Implement a custom marketplace for multi vendor feature .
+package: Commerce (contrib)
+type: module
+version: 1.0
+core: 8.x
+dependencies:
+  - commerce:commerce_product
+  - commerce:commerce_tax
+  - core_extend

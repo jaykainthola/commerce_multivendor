@@ -1,0 +1,12 @@
+## YAML Template.
+---
+view own store locations entity:
+  title: 'View own Store Locations entity'
+add store locations entity:
+  title: 'Add Store Locations entity'
+edit own store inventory location:
+  title: 'Edit own Inventory Locations'  
+create store inventory:
+  title: 'Create store inventory' 
+view own store inventory:
+  title: 'View Own Store inventory'

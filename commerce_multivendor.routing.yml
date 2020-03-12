@@ -1,0 +1,96 @@
+## YAML Template.
+---
+# Route name can be used in several place (links, redirects, local actions etc.)
+entity.commerce_store_locations.canonical:
+  path: '/commerce_store_locations/{commerce_store_locations}'
+  defaults:
+  # Calls the view controller, defined in the annotation of the contact entity
+    _entity_view: 'commerce_store_locations'
+    _title: 'Store Locations Content'
+  requirements:
+  # Calls the access controller of the entity, $operation 'view'
+    _permission: 'view own store locations entity'
+
+entity.commerce_store_locations.collection:
+  path: '/admin/commerce/store-locations'
+  defaults:
+  # Calls the list controller, defined in the annotation of the contact entity.
+    _entity_list: 'commerce_store_locations'
+    _title: 'Store Locations List'
+  requirements:
+  # Checks for permission directly.
+    _permission: 'view store locations entity'
+    
+entity.commerce_store_locations.list:
+  path: '/store-locations'
+  defaults:
+  # Calls the list controller, defined in the annotation of the contact entity.
+    _entity_list: 'commerce_store_locations'
+    _title: 'Store Locations List'
+  requirements:
+  # Checks for permission directly.
+    _permission: 'view own store locations entity'    
+
+entity.commerce_multivendor.add_form:
+  path: '/store-locations/add'
+  defaults:
+  # Calls the form.add controller, defined in the contact entity.
+    _entity_form: commerce_store_locations.add
+    _title: 'Add Store Locations'
+  requirements:
+    _permission: 'add store locations entity'
+
+entity.commerce_store_locations.edit_form:
+  path: '/store-locations/{commerce_store_locations}/edit'
+  defaults:
+  # Calls the form.edit controller, defined in the inventory entity.
+    _entity_form: commerce_store_locations.edit
+    _title: 'Edit Store Locations'
+  requirements:
+    _permission: 'edit own store inventory location'
+
+entity.commerce_store_locations.delete_form:
+  path: '/store-locations/{commerce_store_locations}/delete'
+  defaults:
+    # Calls the form.delete controller, defined in the contact entity.
+    _entity_form: commerce_store_locations.delete
+    _title: 'Delete Store Locations'
+  requirements:
+    _entity_access: 'commerce_store_locations.delete'
+
+commerce_store_locations.manage_settings:
+  path: 'admin/commerce/store-locations/settings'
+  defaults:
+    _form: '\Drupal\commerce_multivendor\Form\StoreLocationsSettingsForm'
+    _title: 'Store Locations Settings'
+  requirements:
+    _permission: 'administer Store Locations entity'
+
+entity.commerce_store_item.list:
+  path: '/store-locations/{commerce_store_locations}/inventory'
+  defaults:
+  # Calls the list controller, defined in the annotation of the contact entity.
+    _entity_list: 'commerce_store_item'
+    _title: 'Store Inventory List'
+  requirements:
+  # Checks for permission directly.
+    _permission: 'view own store inventory' 
+
+entity.commerce_store_item.inventory:
+  path: '/store-inventory'
+  defaults:
+  # Calls the list controller, defined in the annotation of the contact entity.
+    _entity_list: 'commerce_store_item'
+    _title: 'Store Inventory List'
+  requirements:
+  # Checks for permission directly.
+    _permission: 'view own store inventory' 
+entity.commerce_store_item.add_inventory:
+  path: '/store-locations/{commerce_store_locations}/inventory/add'
+  defaults:
+  # Calls the list controller, defined in the annotation of the contact entity.
+   _entity_form: commerce_store_item.add
+   _title: 'Add Inventory'
+  requirements:
+  # Checks for permission directly.
+    _permission: 'create store inventory' 

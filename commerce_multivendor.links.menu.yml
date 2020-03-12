@@ -1,0 +1,14 @@
+## YAML Template.
+---
+# Define the menu links for this module
+
+entity.commerce_store_locations.collection:
+  title: 'Vendor: Store Locations'
+  route_name: entity.commerce_store_locations.collection
+  description: 'List Store Locations'  
+  parent: 'commerce.store_configuration'
+commerce_store_locations.manage_settings:
+  title: 'Vendor: Store Locations Settings'
+  description: 'Configure Store Locations entity'
+  route_name: commerce_store_locations.manage_settings
+  parent: 'commerce.store_configuration'
